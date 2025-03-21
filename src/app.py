@@ -17,7 +17,8 @@ with open('../data/processed/dic_er.json','r', encoding='utf-8') as archivo:
     dic_er = json.load(archivo)
 with open('../data/processed/dic_cs.json','r', encoding='utf-8') as archivo:
     dic_cs = json.load(archivo)
-
+#AQUI TENIA UN ERROR DE QUE AL EJECUTAR GUNICORN APP:APP NO SE ENCONTRABA MI ARCHIVO DE APP.PY
+#LO CORREGI LUEGO DE 100 HORAS, GRACIAS DIOS
 @app.route("/", methods = ["GET", "POST"])
 def index():
     if request.method == "POST":
